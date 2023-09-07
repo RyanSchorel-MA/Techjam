@@ -1,0 +1,832 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 3.1rem;
+    color:black
+}
+h2{
+    font-size: 2rem;
+    color:black
+}
+/* Navigatie */
+
+header {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    top: 0;
+    position: fixed; 
+    z-index: 99;
+    width: 100%; 
+}
+
+header .logo {
+    width: 12rem;
+    height: 6rem;
+    padding: 1rem;
+}
+
+header input {
+    padding: 0.6rem;
+    width: 100%;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    background: #efefef;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+header nav ul {
+    padding: 2.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Hero image */
+
+.hero-image {
+    background-image: linear-gradient(#dfb404, #dfb404), url(" ");
+    height: 30vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-container {
+    text-align: left;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding-left: 2rem;
+    width: 100%;
+    max-width: 50rem;
+    box-sizing: border-box;
+}
+
+.hero-container a {
+    border: 0.1rem solid;
+    border-radius: 103rem;
+    outline: 0;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    color: #000000;
+    background-color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.hero-container a:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Sales */
+
+.sales-container {
+    width: 80%;
+    margin: 6.5em auto .5em auto;
+    padding-bottom: 2em;
+}
+
+.sales-container article {
+    display: flex;
+    border-radius: 0.6rem;
+    width: 100%;
+    height: auto;
+    background-color: #f01414;
+    margin-top: 2em;
+}
+
+.sales-container article:nth-child(2) img {
+    object-position: 80%;
+}
+
+.sales-container div {
+    padding: 2em;
+    width: 50%;
+}
+
+.sales-container img {
+    border-radius: 0.6rem 0 0 0.6rem;
+    width: 65%;
+    min-height: 100%;
+    object-fit: cover;
+    background-color: #f4f4f4;
+}
+
+.sales-container h2 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.sales-container a {
+    border: 0.1rem solid;
+    border-radius: 0.3rem;
+    outline: 0;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    margin-top: 10rem;
+    color: #fff;
+    background-color: #f01414;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.sales-container a:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Aanbiedingen */
+
+.aanbiedingen-container h2 {
+    margin: 2.5em auto auto auto;
+    width: 80%;
+    color: #000;
+    font-size: 2rem;
+}
+
+.aanbiedingen-list {
+    margin: 2rem auto 2.5em auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+}
+
+.aanbiedingen-product {
+    height: 22rem;
+    border-radius: 0.3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: #f4f4f4;
+}
+
+.aanbiedingen-product img{
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    background-color: #f4f4f4;
+}
+
+.aanbiedingen-product span {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #000000;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 0.7rem;
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+}
+
+/* Stappen */
+
+.stappen-container h2 {
+    margin: 2.5em auto auto auto;
+    width: 80%;
+    color: #000;
+    font-size: 2rem;
+}
+
+.stappen-container h3 {
+    margin: 0.5em auto auto auto;
+    width: 80%;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.stappen-list {
+    margin: 2rem auto 2.5em auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+}
+
+.stappen {
+    border: 0.2rem solid;
+    color: #fff;
+    background-color: #f01414;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.stappen p {
+    margin-top: 1rem;
+}
+
+.stappen-icon {
+    width: 4.2rem;
+    height: 4.2rem;
+    padding: 1.2rem;
+    background-color: #f4f4f4;
+    border: 0.2rem solid;
+    border-radius: 50%;
+    margin: 0.7rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Gaaf product */
+
+.gaaf-product-container {
+    width: 80%;
+    margin: 6.5em auto .5em auto;
+    padding-bottom: 2em;
+}
+
+.gaaf-product-container article {
+    display: flex;
+    border-radius: 0.6rem;
+    width: 100%;
+    height: auto;
+    background-color: #f01414;
+    margin-top: 2em;
+}
+
+.gaaf-product-container article:nth-child(2) img {
+    object-position: 80%;
+}
+
+.gaaf-product-container div {
+    padding: 2em;
+    width: 50%;
+}
+
+.gaaf-product-container img {
+    border-radius: 0.6rem 0 0 0.6rem;
+    width: 65%;
+    min-height: 100%;
+    object-fit: cover;
+    background-color: #f4f4f4;
+}
+
+.gaaf-product-container h2 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.gaaf-product-container ul {
+    color: #fff;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    list-style: none;
+}
+
+.gaaf-product-container a {
+    border: 0.1rem solid;
+    border-radius: 0.3rem;
+    outline: 0;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    margin-top: 3rem;
+    color: #fff;
+    background-color: #f01414;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.gaaf-product-container a:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Reviews */
+.reviews-container h2 {
+    margin: 2.5em auto auto auto;
+    width: 80%;
+    color: #000;
+    font-size: 2rem;
+}
+
+.reviews-container h3 {
+    margin: 0.5em auto auto auto;
+    width: 80%;
+    color: #000;
+    font-size: 2rem;
+}
+
+.reviews-list {
+    margin: 2rem auto 2.5em auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5em;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.reviews {
+    background-color: #e6e6e6;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    margin-right: 20rem;
+    text-align: center;
+    width: 90%;
+}
+
+.reviews p {
+    margin-top: 0.5rem;
+}
+
+.reviews-gebruiker {
+    width: 6rem;
+    height: 6rem;
+    padding: 0.3rem;
+    background-color: #f01414;
+    border-radius: 50%;
+    margin: 0.7rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stars {
+    color: #f0aa14;
+    font-size: 2rem;
+}
+
+/* Filter producten */
+
+.filter-container h1 {
+    margin: 5.5em auto auto auto;
+    width: 80%;
+    color: #000;
+    font-size: 2rem;
+}
+
+.filter-container div {
+    margin: 0.5rem auto auto auto;
+    width: 80%;
+    color: #000;
+}
+
+.filter-producten {
+    width: 80%;
+    margin: 2.5em auto .5em auto;
+    padding-bottom: 2em;
+}
+
+.producten{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+  }
+  
+  .product{
+    list-style: none;
+    width: 15rem;
+    height: 20rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .product:hover{
+    transform: scale(1.02) translateY(-0.7rem);
+    cursor: pointer;
+  }
+  
+  .product img{
+    height: 22rem;
+    border-radius: 0.3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: #f4f4f4;
+  }
+
+/* Individueel product */
+
+.individueel-product-container {
+    width: 80%;
+    margin: 9.5em auto .5em auto;
+    padding-bottom: 2em;
+}
+
+.individueel-product-container article {
+    display: flex;
+    border-radius: 0.6rem;
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+}
+
+.individueel-product-container article:nth-child(2) img {
+    object-position: 80%;
+}
+
+.individueel-product-container div {
+    padding: 2em;
+    width: 50%;
+}
+
+.individueel-product-container ul{
+    margin-top: 0.8rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    float: left;
+}
+
+.individueel-product-container li{
+    background-color: #f01414;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+
+.individueel-product-container img {
+    border-radius: 0.6rem 0 0 0.6rem;
+    width: 35%;
+    min-height: 30rem;
+    max-height: 30rem;
+    object-fit: fill;
+    background-color: #f4f4f4;
+}
+
+.individueel-product-container h2 {
+    color: #000;
+    font-size: 3rem;
+}
+
+.individueel-product-container div p {
+    color: #000;
+    font-size: 2rem;
+    margin-top: 5rem;
+}
+
+.individueel-product-container p {
+    color: #000;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.individueel-product-container a {
+    border: 0.1rem solid;
+    border-color: #f01414;
+    border-radius: 0.3rem;
+    outline: 0;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    color: #fff;
+    background-color: #f01414;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.individueel-product-container a:hover {
+    border-color: #000;
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Winkelmandje */
+
+.winkelmandje-container {
+    width: 80%;
+    margin: 9.5em auto .5em auto;
+    padding-bottom: 2em;
+}
+
+.winkelmandje-container h1 {
+    margin: 5.5em auto auto auto;
+    font-size: 2rem;
+}
+
+.shoppinginfo ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+}
+
+.shoppinginfo li {
+    color: #000;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.winkelmandje-container li {
+    background-color: #f01414;
+    color: #fff;
+    border-radius: 0.3rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+}
+
+.winkelmandje-container img {
+    background-color: #f4f4f4;
+    border-radius: 0.3rem;
+    width: 15%;
+    margin-bottom: 1rem;
+}
+
+.winkelmandje-container button {
+    border: 0.1rem solid;
+    border-radius: 0.3rem;
+    outline: 0;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    color: #fff;
+    background-color: #f01414;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.winkelmandje-container button:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+  
+
+.top{
+    width: 80px;
+    height: 80px;
+    background: #f01414;
+    border: none;
+    font-size: 125%;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 100px;
+    color: white;
+    position: fixed;
+    bottom: 530px;
+    right: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top--image{
+    width: 3rem;
+    height: 3rem;
+}
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: #e6e6e6;
+    margin-top: 6.5em;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5em;
+}
+
+footer ul {
+    text-decoration: none;
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+footer li {
+    margin-top: 0.5rem;
+}
+
+footer p {
+    margin-top: 0.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1224px) {
+    header nav li {
+        padding-left: 0.6rem;
+    }
+
+    header input {
+        display: none;
+    }
+
+    .hero-image {
+        height: 60vh;
+        margin-bottom: -4rem;
+    }
+
+    .hero-image h1 {
+        font-size: 2.5rem;
+        margin-top: 10rem;
+    }
+
+    .hero-container {
+        top: 40%;
+        width: 90%;
+        padding-left: 0.5rem;
+    }
+
+    .sales-container h2 {
+        font-size: 2rem;
+        width: 100%;
+      }
+
+    .sales-container {
+        width: 90%;
+        padding-bottom: 2em;
+    }
+
+    .sales-container a {
+        width: 8rem;
+        margin-top: 6rem;
+    }
+
+    .aanbiedingen-container h2 {
+        margin: 2.5em auto auto auto;
+        width: 90%;
+        color: #000;
+        font-size: 2rem;
+    }
+
+    .aanbiedingen-list {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .stappen-container h2 {
+        margin: 2.5em auto auto auto;
+        width: 90%;
+        color: #000;
+        font-size: 2rem;
+    }
+
+    .stappen-list {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .reviews-container h2 {
+        margin: 2.5em auto auto auto;
+        width: 90%;
+        color: #000;
+        font-size: 2rem;
+    }
+
+    .reviews-list {
+        width: 90%;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.5rem;
+    }
+
+    .gaaf-product-container {
+        width: 90%;
+        padding-bottom: 2em;
+    }
+
+    .gaaf-product-container h2 {
+        font-size: 2rem;
+        width: 100%;
+      }
+
+    .gaaf-product-container li {
+        font-size: 1.2rem;
+        width: 100%;
+      }
+
+    .producten {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    footer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header nav li {
+        padding-left: 0.6rem;
+    }
+
+    nav ul {
+        overflow-y: scroll;
+    }
+
+    header input {
+        display: none;
+    }
+
+    .hero-image {
+        height: 60vh;
+        margin-bottom: -4rem;
+    }
+
+    .hero-image h1 {
+        font-size: 2.5rem;
+        margin-top: 10rem;
+    }
+
+    .hero-container {
+        top: 40%;
+        width: 90%;
+        padding-left: 0.5rem;
+    }
+
+    footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
